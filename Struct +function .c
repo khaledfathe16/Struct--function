@@ -3,8 +3,8 @@
 typedef int d32;
 typedef unsigned char u8;
 typedef float f32;
-
-struct salary { //struct defintion to compiler
+// "Note" The salary here not a name but it's a type of struct
+struct salary { //struct defintion to compiler 
  d32 salary;
  d32 bonus;
  d32 deductions;
@@ -14,10 +14,11 @@ struct salary { //struct defintion to compiler
 d32 ahmedt(struct salary x); //passing the struct to the function by value
 
      int main(void){
+
 struct salary Ahmed; // allocations in memory + declaration
 int sum=0;
 
-printf("Please enter Ahmed Salary = ");   //scanf the values of elemnts of object
+printf("Please enter Ahmed Salary = ");   //scanf the values of elements of object
 scanf("%d",&Ahmed.salary);
 printf("Please enter Ahmed Bonuse = ");
 scanf("%d",&Ahmed.bonus);
@@ -31,6 +32,7 @@ d32 ahmedt(struct salary x){
 d32 sum;
 sum=x.salary+x.bonus+x.deductions;
 return sum;
+
 }
 
 
